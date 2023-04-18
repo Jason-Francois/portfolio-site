@@ -1,0 +1,55 @@
+@media (max-width: 35em) {
+  .primary-nav {
+    position: fixed;
+    inset: 0 0 0 60%;
+    background: hsla(0, 0%, 85%, 0.2);
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2rem;
+    backdrop-filter: blur(1rem);
+    transform: translateX(100%);
+    transition: transform 300ms ease-in;
+  }
+  .mobile-nav-toggle {
+    position: absolute;
+    background: transparent;
+    border-radius: 5px;
+    right: 2rem;
+    z-index: 500;
+    display: block;
+  }
+
+  .primary-nav[data-visible="true"] {
+    transform: translateX(0%);
+  }
+}
+
+/* button one */
+
+.mobile-nav-toggle .line {
+  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  transform-origin: center;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .line {
+  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] :is(.top, .bottom) {
+  y: 45;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .top {
+  rotate: 45deg;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .middle {
+  opacity: 0;
+}
+.mobile-nav-toggle[aria-expanded="true"] .bottom {
+  rotate: -45deg;
+}
+
+.hamburger {
+  height: 100%;
+  width: 100%;
+}
