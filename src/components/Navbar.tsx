@@ -15,83 +15,98 @@ export default function Navbar() {
       nav?.setAttribute("aria-expanded", "false");
       button?.setAttribute("aria-expanded", "false");
     }
+    nav?.classList.toggle(styles["open"]);
   };
   return (
     <>
-      <header className="primary-header flex items-center justify-between px-6 py-10 text-black">
-        <Link href="/">
-          <Image
-            src="logo.svg"
-            className="header-logo"
-            alt="website logo"
-            width={150}
-            height={150}
-          />
-        </Link>
-        <button
-          id="mobile-nav-toggle"
-          onClick={handleClick}
-          className={`${styles["mobile-nav-toggle"]} hidden`}
-          aria-controls="primary-nav"
-          aria-expanded="false"
-          title="Open and Close Navigation"
+      <header className={`text-black"`}>
+        <div
+          className={`${styles["primary-header__container"]} flex items-center justify-between`}
         >
-          <span className="sr-only">Menu</span>
-          <svg
-            className={`${styles["hamburger"]}`}
-            viewBox="0 0 100 100"
-            width="50"
+          <div
+            className={`${styles["header__logo-container"]} w-full flex items-center justify-between`}
           >
-            <rect
-              className={`${styles["line"]} ${styles["top"]}`}
-              width="80"
-              height="10"
-              x="10"
-              y="30"
-              rx="5"
-            ></rect>
-            <rect
-              className={`${styles["line"]} ${styles["middle"]}`}
-              width="80"
-              height="10"
-              x="10"
-              y="50"
-              rx="5"
-            ></rect>
-            <rect
-              className={`${styles["line"]} ${styles["bottom"]}`}
-              width="80"
-              height="10"
-              x="10"
-              y="70"
-              rx="5"
-            ></rect>
-          </svg>
-        </button>
-        <nav role="navigation" aria-label="Primary Navigation">
-          <ul
-            id="primary-nav"
-            className={`${styles["primary-nav"]} flex gap-4`}
-            role="list"
-            data-visible="false"
+            <div>
+              <Link href="/">
+                <Image
+                  src="logo.svg"
+                  className="header-logo"
+                  alt="website logo"
+                  width={100}
+                  height={100}
+                />
+              </Link>
+            </div>
+            <button
+              id="mobile-nav-toggle"
+              onClick={handleClick}
+              className={`${styles["mobile-nav-toggle"]} hidden`}
+              aria-controls="primary-nav"
+              aria-expanded="false"
+              title="Open and Close Navigation"
+            >
+              <span className="sr-only">Menu</span>
+              <svg
+                className={`${styles["hamburger"]}`}
+                viewBox="0 0 100 100"
+                width="50"
+              >
+                <rect
+                  className={`${styles["line"]} ${styles["top"]}`}
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="30"
+                  rx="5"
+                ></rect>
+                <rect
+                  className={`${styles["line"]} ${styles["middle"]}`}
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="50"
+                  rx="5"
+                ></rect>
+                <rect
+                  className={`${styles["line"]} ${styles["bottom"]}`}
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="70"
+                  rx="5"
+                ></rect>
+              </svg>
+            </button>
+          </div>
+          <nav
+            className={`${styles["primary-nav-container"]}`}
+            role="navigation"
+            aria-label="Primary Navigation"
           >
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a href="#">Skills</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Resume</a>
-            </li>
-          </ul>
-        </nav>
+            <ul
+              id="primary-nav"
+              className={`${styles["primary-nav"]} flex gap-4`}
+              role="list"
+              data-visible="false"
+            >
+              <li className={`${styles["primary-nav-item"]}`}>
+                <a href="#">About</a>
+              </li>
+              <li className={`${styles["primary-nav-item"]}`}>
+                <a href="#">Projects</a>
+              </li>
+              <li className={`${styles["primary-nav-item"]}`}>
+                <a href="#">Skills</a>
+              </li>
+              <li className={`${styles["primary-nav-item"]}`}>
+                <a href="#">Contact</a>
+              </li>
+              <li className={`${styles["primary-nav-item"]}`}>
+                <a href="#">Resume</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
     </>
   );

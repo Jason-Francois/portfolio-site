@@ -1,30 +1,69 @@
+.primary-header {
+  box-shadow: 0 10px 100px rgb(0 0 0 / 10%);
+  width: 100%;
+  background: #fff;
+  z-index: 10001;
+}
+.primary-header__container {
+  padding: 0 3rem;
+}
+.hamburger {
+  height: 100%;
+  width: 100%;
+}
+.primary-nav {
+  text-align: center;
+  background: white;
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+
+.open {
+  opacity: 1;
+  display: flex;
+}
+.primary-nav-container {
+  transition: 0.5s all ease-in-out;
+}
+
 @media (max-width: 35em) {
-  .primary-nav {
-    position: fixed;
-    inset: 0 0 0 60%;
-    background: hsla(0, 0%, 85%, 0.2);
+  .primary-header__container {
     flex-direction: column;
-    padding: min(30vh, 10rem) 2rem;
-    backdrop-filter: blur(1rem);
-    transform: translateX(100%);
-    transition: transform 300ms ease-in;
+    padding: 0;
+  }
+  .primary-nav {
+    flex-direction: column;
+    opacity: 0;
+    position: absolute;
+  }
+  .primary-nav-container {
+    width: 100%;
   }
   .mobile-nav-toggle {
-    position: absolute;
     background: transparent;
     border-radius: 5px;
-    right: 2rem;
     z-index: 500;
     display: block;
   }
-
-  .primary-nav[data-visible="true"] {
-    transform: translateX(0%);
+  .primary-nav-item {
+    padding: 0.5rem;
+    border-top: 1px solid #eee;
+    font-size: 1.6rem;
+  }
+  .primary-nav-item a {
+    width: 100%;
+    display: block;
+  }
+  .open {
+    opacity: 1;
+    display: flex;
+  }
+  .header__logo-container {
+    padding: 0 2rem;
   }
 }
 
-/* button one */
-
+/* Taken from Kevin Powell tutorial*/
 .mobile-nav-toggle .line {
   transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
   transform-origin: center;
@@ -47,9 +86,4 @@
 }
 .mobile-nav-toggle[aria-expanded="true"] .bottom {
   rotate: -45deg;
-}
-
-.hamburger {
-  height: 100%;
-  width: 100%;
 }
