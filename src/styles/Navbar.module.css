@@ -3,6 +3,7 @@
   width: 100%;
   background: #fff;
   z-index: 10001;
+  position: fixed;
 }
 .primary-header__container {
   padding: 0 3rem;
@@ -16,6 +17,7 @@
   background: white;
   width: 100%;
   transition: 0.5s all ease-in-out;
+  z-index: 1001;
 }
 
 .open {

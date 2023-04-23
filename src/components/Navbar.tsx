@@ -19,7 +19,7 @@ export default function Navbar() {
   };
   return (
     <>
-      <header className={`text-black"`}>
+      <header className={`${"primary-header"} text-black"`}>
         <div
           className={`${styles["primary-header__container"]} flex items-center justify-between`}
         >
