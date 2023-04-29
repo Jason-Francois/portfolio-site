@@ -90,9 +90,6 @@ export default function Navbar() {
               data-visible="false"
             >
               <li className={`${styles["primary-nav-item"]}`}>
-                <a href="#">About</a>
-              </li>
-              <li className={`${styles["primary-nav-item"]}`}>
                 <a href="#">Projects</a>
               </li>
               <li className={`${styles["primary-nav-item"]}`}>
