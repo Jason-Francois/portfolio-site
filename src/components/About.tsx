@@ -1,8 +1,12 @@
 import styles from "@/styles/About.module.css";
+import Canvas from "./Canvas";
 export default function About() {
   return (
     <>
-      <section className={`${styles["hero"]}`}>
+      <section className={`${styles["hero"]} h-screen`}>
+        <div className={`${styles["hero-bg"]}`}>
+          <Canvas width={""} height={""} numParticles={0} lineDistance={0} />
+        </div>
         <div className={`${styles["hero__container"]}`}>
           <h1 className={`${styles["hero__header"]}`}>
             Hi, I&apos;m{" "}
@@ -11,9 +15,7 @@ export default function About() {
             </span>
           </h1>
           <p className={`${styles["hero__caption"]}`}>
-            A Full-Stack developer from Philadelphia, PA commited to giving
-            users memorable experiences through creating web apps with a variety
-            of technologies.
+            A Full-Stack developer from Philadelphia, PA
           </p>
           <button role="button" className={`${styles["hero__button"]}`}>
             Projects

@@ -1,9 +1,11 @@
 .primary-header {
   box-shadow: 0 10px 100px rgb(0 0 0 / 10%);
   width: 100%;
-  background: #fff;
-  z-index: 10001;
+  bottom: inherit;
+  left: 0;
   position: fixed;
+  top: 0;
+  z-index: 500;
 }
 .primary-header__container {
   padding: 0 3rem;

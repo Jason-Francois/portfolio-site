@@ -8,13 +8,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(210deg, #053f75, #0084ff);
+  background: #121318;
   background-size: 400% 400%;
   animation: AnimationName 20s ease infinite;
 }
+.hero-bg {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  filter: blur(1px) brightness(0.6);
+}
 .hero__container {
-  color: white;
+  color: #f2f4f9;
   text-align: center;
+  z-index: 2;
 }
 
 .hero__header {
@@ -25,67 +34,31 @@
   text-align: center;
   line-height: 1.5;
   max-width: 80rem;
-  font-size: 1.375rem;
+  font-size: 2rem;
   margin: 2rem 0;
 }
 .hero__button {
   padding: 15px 20px;
-  background-color: red;
+  border: 1px solid white;
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transition: all 0.5s;
+}
+
+.hero__button:hover {
+  border-color: green;
+  background: green;
 }
 .hero__header-name {
-  color: pink;
+  color: rgb(16, 252, 16);
 }
 
-.css-selector {
-  background: linear-gradient(40deg, #053f75, #000000, #ff63e4);
-  background-size: 600% 600%;
-
-  -webkit-animation: AnimationName 20s ease infinite;
-  -moz-animation: AnimationName 20s ease infinite;
-  animation: AnimationName 20s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 0% 18%;
-  }
-  50% {
-    background-position: 100% 83%;
-  }
-  100% {
-    background-position: 0% 18%;
-  }
-}
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 0% 18%;
-  }
-  50% {
-    background-position: 100% 83%;
-  }
-  100% {
-    background-position: 0% 18%;
-  }
-}
-@keyframes AnimationName {
-  0% {
-    background-position: 0% 18%;
-  }
-  50% {
-    background-position: 100% 83%;
-  }
-  100% {
-    background-position: 0% 18%;
-  }
-}
 @media (max-width: 40em) {
   .hero {
-    padding: 9rem;
+    padding: 4rem;
   }
-  .hero__container {
-    padding: 0 2rem;
+  .hero__header {
+    font-size: 2rem;
   }
 }
