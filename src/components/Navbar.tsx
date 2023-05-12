@@ -6,6 +6,7 @@ export default function Navbar() {
   const handleClick = (): void => {
     const nav = document.querySelector("#primary-nav");
     const button = document.querySelector("#mobile-nav-toggle");
+    const hamburgerToggle = document.querySelector("#hamburger");
     const isExpanded = button?.getAttribute("aria-expanded");
     if (isExpanded === "false") {
       nav?.setAttribute("data-visible", "true");
@@ -17,6 +18,7 @@ export default function Navbar() {
       button?.setAttribute("aria-expanded", "false");
     }
     nav?.classList.toggle(styles["open"]);
+    hamburgerToggle?.classList.toggle(styles["open"]);
   };
   const handleScroll = (): void => {
     const nav = document.querySelector(`.${styles["primary-header"]}`);
@@ -62,36 +64,12 @@ export default function Navbar() {
               title="Open and Close Navigation"
             >
               <span className="sr-only">Menu</span>
-              <svg
-                className={`${styles["hamburger"]}`}
-                viewBox="0 0 100 100"
-                width="50"
-              >
-                <rect
-                  className={`${styles["line"]} ${styles["top"]}`}
-                  width="80"
-                  height="10"
-                  x="10"
-                  y="30"
-                  rx="5"
-                ></rect>
-                <rect
-                  className={`${styles["line"]} ${styles["middle"]}`}
-                  width="80"
-                  height="10"
-                  x="10"
-                  y="50"
-                  rx="5"
-                ></rect>
-                <rect
-                  className={`${styles["line"]} ${styles["bottom"]}`}
-                  width="80"
-                  height="10"
-                  x="10"
-                  y="70"
-                  rx="5"
-                ></rect>
-              </svg>
+              <div id="hamburger" className={`${styles["hamburger"]}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </button>
           </div>
           <nav
