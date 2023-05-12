@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/Navbar.module.css";
+import { useEffect } from "react";
 export default function Navbar() {
   const handleClick = (): void => {
     const nav = document.querySelector("#primary-nav");
@@ -17,6 +18,21 @@ export default function Navbar() {
     }
     nav?.classList.toggle(styles["open"]);
   };
+  const handleScroll = (): void => {
+    const nav = document.querySelector(`.${styles["primary-header"]}`);
+    if (nav) {
+      nav.classList.add(styles["scrolled"]);
+      if (window.scrollY == 0) {
+        nav.classList.remove(styles["scrolled"]);
+      }
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      // debugger;
+      handleScroll();
+    });
+  });
   return (
     <>
       <header className={`${styles["primary-header"]} text-black"`}>

@@ -1,31 +1,56 @@
-import { useEffect, useRef, useState } from "react";
-import Particle from "./Particle";
-
 // Citation: Inspired, in part, by Frank's Laboratory CanvasJS Tutorial
 // Link: ("https://www.youtube.com/watch?v=Yvz_axxWG4Y&list=PLVCwuSoMXkBFHqKFf6zeXfzkaY_4VcJEp&index=6")
+
+import { useEffect, useRef, useState } from "react";
+import Particle from "../classes/Particle";
 
 interface canvasProps {
   width: string;
   height: string;
   numParticles: number;
   lineDistance: number;
+  lineColor: string;
 }
 
 const Canvas = (props: canvasProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [context, setContext] = useState<CanvasRenderingContext2D | null>(null);
   const [particles, setParticles] = useState<Particle[]>([]);
-  const init = (context: CanvasRenderingContext2D) => {
-    for (let i = 0; i < 35; i++) {
-      setParticles((arr) => [
-        ...arr,
-        new Particle(
-          Math.random() * context.canvas.width,
-          Math.random() * context.canvas.height
-        ),
-      ]);
-    }
+
+  /**
+   * Uses width of canvas to determine far
+   * particles must be to draw line
+   * @param context
+   * @returns
+   */
+  const getLineConstraint = (context: CanvasRenderingContext2D) => {
+    return context.canvas!.width > 900 ? 300 : 140;
   };
+
+  /**
+   * Draws line between particles
+   * @param context Canvas rendering context
+   * @param particles list of particles
+   * @param i index of particle A
+   * @param j index of particle B
+   */
+  const drawLineBetweenParticles = (
+    context: CanvasRenderingContext2D,
+    particles: Particle[],
+    i: number,
+    j: number
+  ) => {
+    context.beginPath();
+    context.strokeStyle = "green";
+    context.moveTo(particles[i].x, particles[i].y);
+    context.lineTo(particles[j].x, particles[j].y);
+    context.stroke();
+  };
+
+  /**
+   * Updates and draws particles for each animation frame
+   * @param context Canvas context
+   */
   const handleParticles = (context: CanvasRenderingContext2D) => {
     for (let i = 0; i < particles.length; i++) {
       particles[i].update(context);
@@ -36,22 +61,17 @@ const Canvas = (props: canvasProps) => {
 
         const distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
 
-        let lineLength: number;
-        if (context.canvas!.width > 900) {
-          lineLength = 500;
-        } else {
-          lineLength = 140;
-        }
-        if (distance < lineLength) {
-          context.beginPath();
-          context.strokeStyle = "green";
-          context.moveTo(particles[i].x, particles[i].y);
-          context.lineTo(particles[j].x, particles[j].y);
-          context.stroke();
+        if (distance < getLineConstraint(context)) {
+          drawLineBetweenParticles(context, particles, i, j);
         }
       }
     }
   };
+
+  /**
+   * Clears canvas and draws animation frame
+   * @param context Canvas context
+   */
   const animate = (context: CanvasRenderingContext2D) => {
     context.clearRect(0, 0, context.canvas!.width, context.canvas!.height);
     context.canvas.height = window.innerHeight;
@@ -61,6 +81,11 @@ const Canvas = (props: canvasProps) => {
   };
 
   useEffect(() => {
+    /**
+     * Populates the particle array
+     * @param context Canvas context
+     */
+
     if (canvasRef.current) {
       const canvas = canvasRef.current;
       canvas.height = window.innerHeight;
@@ -68,13 +93,20 @@ const Canvas = (props: canvasProps) => {
       const ctx = canvas.getContext("2d");
       setContext(ctx);
       if (context) {
-        init(ctx!);
+        // Populate the particles array
+        const particlesArr = [];
+        for (let i = 0; i < props.numParticles; i++) {
+          particlesArr.push(
+            new Particle(
+              Math.random() * context.canvas.width,
+              Math.random() * context.canvas.height
+            )
+          );
+        }
+        setParticles(particlesArr);
       }
-      // if (context) {
-      //   init(context);
-      // }
     }
-  }, [context]);
+  }, [context, props.numParticles]);
 
   // Animation loop
   useEffect(() => {
@@ -92,7 +124,7 @@ const Canvas = (props: canvasProps) => {
         context.clearRect(0, 0, context.canvas!.width, context.canvas!.height);
       });
     }
-  }, [animate, context!]);
+  }, [animate, context]);
 
   return (
     <>
