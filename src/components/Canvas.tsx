@@ -41,7 +41,7 @@ const Canvas = (props: canvasProps) => {
     j: number
   ) => {
     context.beginPath();
-    context.strokeStyle = "green";
+    context.strokeStyle = "#4290f5";
     context.moveTo(particles[i].x, particles[i].y);
     context.lineTo(particles[j].x, particles[j].y);
     context.stroke();

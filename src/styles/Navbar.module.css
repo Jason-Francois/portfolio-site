@@ -23,8 +23,8 @@
   color: white;
 }
 .scrolled {
-  background: #272525;
-  border-bottom: rgb(7, 226, 62) 3px solid;
+  background: #18181b;
+  border-bottom: #1c77ed 4px solid;
 }
 .open {
   opacity: 1;

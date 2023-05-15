@@ -3,8 +3,8 @@ export default class Particle {
   public y: number;
   public speedX: number;
   public speedY: number;
-  private radius: number = 12;
-  private color: string = "white";
+  private radius: number = 4;
+  private color: string = "#4290f5";
 
   constructor(x: number, y: number) {
     this.x = x;
@@ -16,7 +16,7 @@ export default class Particle {
   draw(context: CanvasRenderingContext2D) {
     context.fillStyle = this.color;
     context.beginPath();
-    const radius = 4;
+    const radius = this.radius;
     context.arc(this.x, this.y, radius, 0, Math.PI * 2);
     context.fill();
   }

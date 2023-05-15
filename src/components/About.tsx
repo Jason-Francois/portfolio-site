@@ -5,7 +5,13 @@ export default function About() {
     <>
       <section className={`${styles["hero"]} h-screen`}>
         <div className={`${styles["hero-bg"]}`}>
-          <Canvas width={""} height={""} numParticles={30} lineDistance={0} />
+          <Canvas
+            width={""}
+            height={""}
+            numParticles={30}
+            lineDistance={0}
+            lineColor={""}
+          />
         </div>
         <div className={`${styles["hero__container"]}`}>
           <h1 className={`${styles["hero__header"]}`}>

@@ -46,7 +46,7 @@
   background: green;
 }
 .hero__header-name {
-  color: rgb(16, 252, 16);
+  color: #ff614d;
 }
 
 @media (max-width: 40em) {
