@@ -3,8 +3,12 @@ import Canvas from "./Canvas";
 export default function About() {
   return (
     <>
-      <section className={`${styles["hero"]} h-screen`}>
-        <div className={`${styles["hero-bg"]}`}>
+      <section
+        className={`${styles["hero"]} sm:p-16 h-screen p-32 flex justify-center items-center`}
+      >
+        <div
+          className={`${styles["hero-bg"]} absolute z-0 top-0 left-0 brightness-80`}
+        >
           <Canvas
             width={""}
             height={""}
@@ -13,17 +17,37 @@ export default function About() {
             lineColor={""}
           />
         </div>
-        <div className={`${styles["hero__container"]}`}>
-          <h1 className={`${styles["hero__header"]}`}>
+        <div
+          className={`${styles["hero__container"]} flex flex-col gap-8 relative z-2 text-center text-zinc-100`}
+        >
+          <h1
+            className={`${styles["hero__header"]} font-extrabold text-4xl md:text-5xl lg:text-6xl`}
+          >
             Hi, I&apos;m{" "}
             <span className={`${styles["hero__header-name"]}`}>
               Jason François!
             </span>
           </h1>
-          <p className={`${styles["hero__caption"]}`}>
+          <p
+            className={`${styles["hero__caption"]} center text-xl lg:text-2xl`}
+          >
             A Full-Stack developer from Philadelphia, PA
           </p>
-          <button role="button" className={`${styles["hero__button"]}`}>
+          <button
+            role="button"
+            className={`${styles["hero__button"]} 
+              min-w-[33%] 
+              self-center 
+              px-4 
+              py-5 
+              tracking-wide 
+              uppercase
+              rounded
+              border-2
+              border-solid
+              border-white
+              `}
+          >
             Projects
           </button>
         </div>

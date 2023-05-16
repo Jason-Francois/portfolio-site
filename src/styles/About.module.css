@@ -1,59 +1,17 @@
+/* Hero */
 .hero {
-  background-position: center;
-  padding: 8rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #121318;
 }
 .hero-bg {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  filter: blur(1px) brightness(0.8);
-}
-.hero__container {
-  color: #f2f4f9;
-  text-align: center;
-  z-index: 2;
-}
-
-.hero__header {
-  font-weight: 900;
-  font-size: 4rem;
-}
-.hero__caption {
-  text-align: center;
-  line-height: 1.5;
-  max-width: 80rem;
-  font-size: 2rem;
-  margin: 2rem 0;
+  filter: brightness(0.7) blur(1px);
 }
 .hero__button {
-  padding: 15px 20px;
-  border: 1px solid white;
-  border-radius: 5px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: all 0.5s;
+  transition: 0.25s all ease-in-out;
 }
-
 .hero__button:hover {
-  border-color: green;
-  background: green;
+  border-color: var(--primary-color);
+  background: var(--primary-color);
 }
 .hero__header-name {
-  color: #ff614d;
-}
-
-@media (max-width: 40em) {
-  .hero {
-    padding: 4rem;
-  }
-  .hero__header {
-    font-size: 2rem;
-  }
+  color: var(--accent-color);
 }

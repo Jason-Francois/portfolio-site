@@ -17,7 +17,7 @@ export default function Navbar() {
       nav?.setAttribute("aria-expanded", "false");
       button?.setAttribute("aria-expanded", "false");
     }
-    nav?.classList.toggle(styles["open"]);
+    nav?.classList.toggle(styles["nav-open"]);
     hamburgerToggle?.classList.toggle(styles["open"]);
   };
   const handleScroll = (): void => {
@@ -31,18 +31,19 @@ export default function Navbar() {
   };
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      // debugger;
       handleScroll();
     });
   });
   return (
     <>
-      <header className={`${styles["primary-header"]} text-black"`}>
+      <header
+        className={`${styles["primary-header"]} w-full fixed top-0 left-0 z-50`}
+      >
         <div
-          className={`${styles["primary-header__container"]} flex items-center justify-between`}
+          className={`${styles["primary-header__container"]} px-12 flex items-center justify-between`}
         >
           <div
-            className={`${styles["header__logo-container"]} w-full flex items-center justify-between`}
+            className={`${styles["primary-header__logo-container"]} w-full flex items-center justify-between`}
           >
             <div>
               <Link href="/">
@@ -64,7 +65,10 @@ export default function Navbar() {
               title="Open and Close Navigation"
             >
               <span className="sr-only">Menu</span>
-              <div id="hamburger" className={`${styles["hamburger"]}`}>
+              <div
+                id="hamburger"
+                className={`${styles["hamburger"]} w-full h-full`}
+              >
                 <span></span>
                 <span></span>
                 <span></span>
@@ -73,26 +77,38 @@ export default function Navbar() {
             </button>
           </div>
           <nav
-            className={`${styles["primary-nav-container"]}`}
+            className={`${styles["primary-nav-container"]} realtive`}
             role="navigation"
             aria-label="Primary Navigation"
           >
             <ul
               id="primary-nav"
-              className={`${styles["primary-nav"]} flex gap-4`}
+              className={`${styles["primary-nav"]} bg-transparent w-full z-50 flex gap-4 text-white flex left-0`}
               role="list"
               data-visible="false"
             >
-              <li className={`${styles["primary-nav-item"]}`}>
+              <li
+                onClick={handleClick}
+                className={`${styles["primary-nav-item"]}`}
+              >
                 <a href="#">Projects</a>
               </li>
-              <li className={`${styles["primary-nav-item"]}`}>
+              <li
+                onClick={handleClick}
+                className={`${styles["primary-nav-item"]}`}
+              >
                 <a href="#">Skills</a>
               </li>
-              <li className={`${styles["primary-nav-item"]}`}>
+              <li
+                onClick={handleClick}
+                className={`${styles["primary-nav-item"]}`}
+              >
                 <a href="#">Contact</a>
               </li>
-              <li className={`${styles["primary-nav-item"]}`}>
+              <li
+                onClick={handleClick}
+                className={`${styles["primary-nav-item"]}`}
+              >
                 <a href="#">Resume</a>
               </li>
             </ul>
