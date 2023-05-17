@@ -7,7 +7,8 @@ export default function About() {
         className={`${styles["hero"]} sm:p-16 h-screen p-32 flex justify-center items-center`}
       >
         <div
-          className={`${styles["hero-bg"]} absolute z-0 top-0 left-0 brightness-80`}
+          id="hero-bg"
+          className={`${styles["hero-bg"]} absolute h-full w-screen z-0 top-0 left-0 brightness-80`}
         >
           <Canvas
             width={""}

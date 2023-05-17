@@ -37,23 +37,20 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`${styles["primary-header"]} w-full fixed top-0 left-0 z-50`}
+        className={`${styles["primary-header"]} w-full fixed left-0 z-50`}
       >
         <div
-          className={`${styles["primary-header__container"]} px-12 flex items-center justify-between`}
+          className={`${styles["primary-header__container"]}  pt-6 xs:px-8 md:px-12 flex items-center justify-between relative`}
         >
           <div
-            className={`${styles["primary-header__logo-container"]} w-full flex items-center justify-between`}
+            className={`${styles["primary-header__logo-container"]} w-full px-4 flex self-start`}
           >
             <div>
-              <Link href="/">
-                <Image
-                  src="logo.svg"
-                  className="header-logo"
-                  alt="website logo"
-                  width={100}
-                  height={100}
-                />
+              <Link
+                className={`${styles["primary-header__logo"]} text-white`}
+                href="/"
+              >
+                <span className="font-bold lg:text-2xl">François</span>
               </Link>
             </div>
             <button
@@ -77,13 +74,13 @@ export default function Navbar() {
             </button>
           </div>
           <nav
-            className={`${styles["primary-nav-container"]} realtive`}
+            className={`${styles["primary-nav-container"]}`}
             role="navigation"
             aria-label="Primary Navigation"
           >
             <ul
               id="primary-nav"
-              className={`${styles["primary-nav"]} bg-transparent w-full z-50 flex gap-4 text-white flex left-0`}
+              className={`${styles["primary-nav"]} bg-transparent w-full z-50 flex gap-4 text-white flex left-0 top-full md:text-lg`}
               role="list"
               data-visible="false"
             >

@@ -17,6 +17,14 @@ const Canvas = (props: canvasProps) => {
   const [context, setContext] = useState<CanvasRenderingContext2D | null>(null);
   const [particles, setParticles] = useState<Particle[]>([]);
 
+  const setCanvasDimensions = (context: CanvasRenderingContext2D): void => {
+    const bg = document.querySelector("#hero-bg");
+    if (bg) {
+      context.canvas.height = bg.clientHeight;
+      context.canvas.width = bg.clientWidth;
+    }
+  };
+
   /**
    * Uses width of canvas to determine far
    * particles must be to draw line
@@ -74,8 +82,7 @@ const Canvas = (props: canvasProps) => {
    */
   const animate = (context: CanvasRenderingContext2D) => {
     context.clearRect(0, 0, context.canvas!.width, context.canvas!.height);
-    context.canvas.height = window.innerHeight;
-    context.canvas.width = window.innerWidth;
+    setCanvasDimensions(context);
 
     handleParticles(context);
   };
@@ -119,9 +126,8 @@ const Canvas = (props: canvasProps) => {
       };
       renderParticles();
       window.addEventListener("resize", () => {
-        context.canvas.height = window.innerHeight;
-        context.canvas.width = window.innerWidth;
         context.clearRect(0, 0, context.canvas!.width, context.canvas!.height);
+        setCanvasDimensions(context);
       });
     }
   }, [animate, context]);

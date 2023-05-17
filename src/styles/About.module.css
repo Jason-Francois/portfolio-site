@@ -3,7 +3,7 @@
   background: #121318;
 }
 .hero-bg {
-  filter: brightness(0.7) blur(1px);
+  filter: brightness(0.7);
 }
 .hero__button {
   transition: 0.25s all ease-in-out;
