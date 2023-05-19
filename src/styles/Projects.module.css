@@ -1,0 +1,11 @@
+.projects__header-content:after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  height: 5px;
+  width: 3rem;
+  background: var(--primary-color);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
