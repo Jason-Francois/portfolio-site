@@ -14,6 +14,8 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   font-family: "Montserrat", sans-serif;
+  background-color: #fafafa;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -22,9 +24,17 @@ a {
 }
 
 :root {
+  --body-bg-color: #fafafa;
   --bg-color: #1c1c1c;
   --fg-color: #f6f6f1;
   --primary-color: #4290f5;
   --secondary-color: #f5f5f0;
   --accent-color: #ff614d;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-secondary {
+  background-color: var(--secondary-color);
 }

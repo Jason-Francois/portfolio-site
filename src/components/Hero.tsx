@@ -49,7 +49,9 @@ export default function Hero() {
               border-white
               `}
           >
-            Projects
+            <a href="#projects" className="block w-100 h-100 font-bold">
+              View Projects
+            </a>
           </button>
         </div>
       </section>

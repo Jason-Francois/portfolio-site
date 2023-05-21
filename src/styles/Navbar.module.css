@@ -101,7 +101,6 @@
 @media (max-width: 35em) {
   .primary-header__container {
     flex-direction: column;
-    background-color: black;
     padding: 1.5rem;
   }
   .primary-header__logo-container {

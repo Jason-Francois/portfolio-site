@@ -73,6 +73,7 @@ export default function Navbar() {
               </div>
             </button>
           </div>
+
           <nav
             className={`${styles["primary-nav-container"]}`}
             role="navigation"
@@ -80,7 +81,7 @@ export default function Navbar() {
           >
             <ul
               id="primary-nav"
-              className={`${styles["primary-nav"]} bg-transparent w-full z-50 flex gap-4 text-white flex left-0 top-full md:text-lg`}
+              className={`${styles["primary-nav"]} bg-transparent w-full z-50 flex gap-4 text-white flex left-0 top-full md:text-lg tracking-wider font-bold uppercase`}
               role="list"
               data-visible="false"
             >
@@ -88,19 +89,19 @@ export default function Navbar() {
                 onClick={handleClick}
                 className={`${styles["primary-nav-item"]}`}
               >
-                <a href="#">Projects</a>
+                <a href="#projects">Projects</a>
               </li>
               <li
                 onClick={handleClick}
                 className={`${styles["primary-nav-item"]}`}
               >
-                <a href="#">Skills</a>
+                <a href="#skills">Skills</a>
               </li>
               <li
                 onClick={handleClick}
                 className={`${styles["primary-nav-item"]}`}
               >
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
               <li
                 onClick={handleClick}

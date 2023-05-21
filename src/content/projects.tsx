@@ -11,8 +11,7 @@ const projects: ProjectCard[] = [
   },
   {
     title: "CountriesAPI",
-    description:
-      "Dashboard that consumes data from the rest-countries API and displays information about various countries",
+    description: "Dashboard that displays data about various countries",
     skills: "react;scss;nextJS;",
     backgroundImg: "countriesAPI.png",
     githubUrl: "https://github.com/Jason-Francois/countries-api",

@@ -4,8 +4,32 @@
   top: calc(100% + 0.5rem);
   height: 5px;
   width: 3rem;
-  background: var(--primary-color);
+  background: var(--accent-color);
   left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
+}
+
+.projects__card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.projects__card-img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  transition: 0.2s all ease-in-out;
+}
+.projects__card-img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+.projects__card-btn {
+  padding: 0.6em 0.9em;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: 0.2s all ease-in-out;
+  text-align: center;
+}
+
+.projects__card-btn:hover {
+  filter: brightness(0.7);
 }
