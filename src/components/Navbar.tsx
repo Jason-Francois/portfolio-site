@@ -36,9 +36,7 @@ export default function Navbar() {
   });
   return (
     <>
-      <header
-        className={`${styles["primary-header"]} w-full fixed left-0 z-50`}
-      >
+      <header className={`${styles["primary-header"]} w-full fixed top-0 z-50`}>
         <div
           className={`${styles["primary-header__container"]}  pt-6 xs:px-8 md:px-12 flex items-center justify-between relative`}
         >
@@ -46,12 +44,12 @@ export default function Navbar() {
             className={`${styles["primary-header__logo-container"]} w-full px-4 flex self-start`}
           >
             <div>
-              <Link
-                className={`${styles["primary-header__logo"]} text-white`}
-                href="/"
+              <a
+                className={`${styles["primary-header__logo"]} text-white flex gap-3 items-center`}
+                href="#"
               >
                 <span className="font-bold lg:text-2xl">François</span>
-              </Link>
+              </a>
             </div>
             <button
               id="mobile-nav-toggle"

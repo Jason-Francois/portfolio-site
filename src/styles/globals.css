@@ -38,3 +38,14 @@ a {
 .btn-secondary {
   background-color: var(--secondary-color);
 }
+.section__header:after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  height: 5px;
+  width: 3rem;
+  background: var(--accent-color);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}

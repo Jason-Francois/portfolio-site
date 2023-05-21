@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <>
       <section
-        className={`${styles["hero"]} sm:p-16 h-screen p-32 flex justify-center items-center`}
+        className={`${styles["hero"]} p-16 h-screen md:p-24 lg:p-32 flex justify-center items-center`}
       >
         <div
           id="hero-bg"

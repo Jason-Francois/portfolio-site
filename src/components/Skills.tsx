@@ -1,3 +1,14 @@
+import styles from "@/styles/Skills.module.css";
 export default function Skills() {
-  return <></>;
+  return (
+    <>
+      <section id="skills" className={`py-24 px-8 sm:px-16 `}>
+        <h1 className={` block text-center  text-4xl font-bold mb-3`}>
+          <span className={` section__header relative border-solid pb-1`}>
+            Skills
+          </span>
+        </h1>
+      </section>
+    </>
+  );
 }
