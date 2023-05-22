@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "../../public/logo.svg";
 import styles from "@/styles/Navbar.module.css";
 import { useEffect } from "react";
 export default function Navbar() {
@@ -49,6 +50,11 @@ export default function Navbar() {
                 href="#"
               >
                 <span className="font-bold lg:text-2xl">François</span>
+                <span className="block w-12 h-12">
+                  <Logo
+                    className={`${styles["primary-header__logo"]} fill-white `}
+                  />
+                </span>
               </a>
             </div>
             <button
