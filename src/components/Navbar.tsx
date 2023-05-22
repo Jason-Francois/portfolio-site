@@ -1,6 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
-import Logo from "../../public/logo.svg";
+import Logo from "../../public/images/logo.svg";
 import styles from "@/styles/Navbar.module.css";
 import { useEffect } from "react";
 export default function Navbar() {
@@ -111,7 +109,9 @@ export default function Navbar() {
                 onClick={handleClick}
                 className={`${styles["primary-nav-item"]}`}
               >
-                <a href="#">Resume</a>
+                <a href="/other/resume.pdf" target="_blank">
+                  Resume
+                </a>
               </li>
             </ul>
           </nav>
