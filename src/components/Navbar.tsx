@@ -17,7 +17,7 @@ export default function Navbar() {
       button?.setAttribute("aria-expanded", "false");
     }
     nav?.classList.toggle(styles["nav-open"]);
-    hamburgerToggle?.classList.toggle(styles["open"]);
+    hamburgerToggle?.classList.toggle(styles["toggle-open"]);
   };
   const handleScroll = (): void => {
     const nav = document.querySelector(`.${styles["primary-header"]}`);
@@ -77,7 +77,7 @@ export default function Navbar() {
           </div>
 
           <nav
-            className={`${styles["primary-nav-container"]}`}
+            className={`${styles["primary-nav__container"]}`}
             role="navigation"
             aria-label="Primary Navigation"
           >
@@ -89,25 +89,25 @@ export default function Navbar() {
             >
               <li
                 onClick={handleClick}
-                className={`${styles["primary-nav-item"]}`}
+                className={`${styles["primary-nav__item"]}`}
               >
                 <a href="#projects">Projects</a>
               </li>
               <li
                 onClick={handleClick}
-                className={`${styles["primary-nav-item"]}`}
+                className={`${styles["primary-nav__item"]}`}
               >
                 <a href="#skills">Skills</a>
               </li>
               <li
                 onClick={handleClick}
-                className={`${styles["primary-nav-item"]}`}
+                className={`${styles["primary-nav__item"]}`}
               >
                 <a href="#contact">Contact</a>
               </li>
               <li
                 onClick={handleClick}
-                className={`${styles["primary-nav-item"]}`}
+                className={`${styles["primary-nav__item"]}`}
               >
                 <a href="/other/resume.pdf" target="_blank">
                   Resume

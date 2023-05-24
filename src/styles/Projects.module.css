@@ -1,25 +1,24 @@
-
-
-.projects__card {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-.projects__card-img {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  transition: 0.2s all ease-in-out;
-}
-.projects__card-img:hover {
-  transform: scale(1.05);
-  filter: brightness(0.8);
-}
-.projects__card-btn {
-  padding: 0.6em 0.9em;
-  border-radius: 5px;
-  font-weight: 700;
-  transition: 0.2s all ease-in-out;
-  text-align: center;
-}
-
-.projects__card-btn:hover {
-  filter: brightness(0.7);
+.projects {
+  &__card {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    &-img {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        filter: brightness(0.8);
+      }
+    }
+    &-btn {
+      padding: 0.6em 0.9em;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: 0.2s all ease-in-out;
+      text-align: center;
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
+  }
 }
