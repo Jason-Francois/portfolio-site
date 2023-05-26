@@ -36,12 +36,14 @@ i {
 
 .btn-primary {
   background-color: var(--primary-color);
+  color: #ffffff;
 }
 .btn-accent {
   background-color: var(--accent-color);
 }
 .btn-secondary {
   background-color: var(--secondary-color);
+  color: #000000;
 }
 .section-padding {
   @apply xs:p-12 p-16 md:p-24 lg:p-32;

@@ -35,7 +35,10 @@ export default function Navbar() {
   });
   return (
     <>
-      <header className={`${styles["primary-header"]} w-full fixed top-0 z-50`}>
+      <header
+        id="header"
+        className={`${styles["primary-header"]} w-full fixed top-0 z-50`}
+      >
         <div
           className={`${styles["primary-header__container"]}  pt-6 xs:px-8 md:px-12 flex items-center justify-between relative`}
         >
