@@ -109,7 +109,11 @@ export default function Navbar() {
                 onClick={handleClick}
                 className={`${styles["primary-nav__item"]}`}
               >
-                <a href="/other/resume.pdf" target="_blank">
+                <a
+                  href="/other/resume.pdf"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   Resume
                 </a>
               </li>

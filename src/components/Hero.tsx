@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <>
       <section
-        className={`${styles["hero"]} p-16 h-screen md:p-24 lg:p-32 flex justify-center items-center`}
+        className={`${styles["hero"]} section-padding h-screen flex justify-center items-center`}
       >
         <div
           id="hero-bg"
@@ -34,8 +34,8 @@ export default function Hero() {
           >
             A Full-Stack developer from Philadelphia, PA
           </p>
-          <button
-            role="button"
+          <a
+            href="#projects"
             className={`${styles["hero__button"]} 
               min-w-[33%] 
               self-center 
@@ -47,12 +47,11 @@ export default function Hero() {
               border-2
               border-solid
               border-white
+              block w-100 h-100 font-bold
               `}
           >
-            <a href="#projects" className="block w-100 h-100 font-bold">
-              View Projects
-            </a>
-          </button>
+            View Projects
+          </a>
         </div>
       </section>
     </>

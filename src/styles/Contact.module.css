@@ -1,0 +1,30 @@
+.contact-form {
+  &__container {
+    background: linear-gradient(
+      90deg,
+      var(--accent-color) 0%,
+      var(--primary-color) 100%
+    );
+  }
+  &__label {
+    @apply font-bold;
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+    & input {
+      padding: 0.5rem 0.3rem;
+      border: 2px solid rgb(201, 200, 200);
+      border-radius: 5px;
+      width: 100%;
+    }
+    & textarea {
+      border-radius: 5px;
+      border: 2px solid rgb(201, 200, 200);
+      padding: 0.875rem;
+      height: 10rem;
+    }
+  }
+}

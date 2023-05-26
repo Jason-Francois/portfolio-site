@@ -48,20 +48,21 @@ export default function Projects() {
                   <p className="text-xl font-bold">{project.title}</p>
                   <p className="flex-1">{project.description}</p>
                   <div className="flex gap-8 flex-col md:flex-row">
-                    <button
+                    <a
                       className={`${styles["projects__card-btn"]} btn-primary`}
+                      href={project.siteUrl}
+                      target="_blank"
                     >
-                      <a href={project.siteUrl} target="_blank">
-                        Live Demo
-                      </a>
-                    </button>
-                    <button
+                      Live Demo
+                    </a>
+
+                    <a
                       className={`${styles["projects__card-btn"]} btn-secondary`}
+                      href={project.githubUrl}
+                      target="_blank"
                     >
-                      <a href={project.githubUrl} target="_blank">
-                        GitHub Repo
-                      </a>
-                    </button>
+                      GitHub Repo
+                    </a>
                   </div>
                 </div>
               </div>

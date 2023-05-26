@@ -37,8 +37,14 @@ i {
 .btn-primary {
   background-color: var(--primary-color);
 }
+.btn-accent {
+  background-color: var(--accent-color);
+}
 .btn-secondary {
   background-color: var(--secondary-color);
+}
+.section-padding {
+  @apply xs:p-12 p-16 md:p-24 lg:p-32;
 }
 .section__header:after {
   content: "";
@@ -50,4 +56,8 @@ i {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
+}
+
+.centered-flex {
+  @apply justify-center items-center;
 }
