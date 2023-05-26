@@ -91,6 +91,12 @@ export default function Navbar() {
                 onClick={handleClick}
                 className={`${styles["primary-nav__item"]}`}
               >
+                <a href="#about">About</a>
+              </li>
+              <li
+                onClick={handleClick}
+                className={`${styles["primary-nav__item"]}`}
+              >
                 <a href="#projects">Projects</a>
               </li>
               <li
