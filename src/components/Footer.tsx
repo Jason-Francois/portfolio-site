@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="w-[5.5rem] h-[5.5rem]">
               <Logo
                 onClick={scrollToTop}
-                className={`${styles["footer__logo"]} fill-black pointer`}
+                className={`${styles["footer__logo"]} fill-black cursor-pointer`}
               />
             </div>
             <p className="text-center">
