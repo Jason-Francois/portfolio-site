@@ -6,7 +6,7 @@ export default function Projects() {
     <>
       <section
         id="projects"
-        className={`${styles["projects"]} py-32 px-8 sm:px-16`}
+        className={`${styles["projects"]} pt-16 sm:pt-32 px-8 sm:px-16`}
       >
         <h1
           className={`${styles["projects__header"]} block text-center text-4xl font-bold mb-3`}

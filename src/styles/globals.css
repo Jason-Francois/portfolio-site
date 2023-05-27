@@ -48,6 +48,9 @@ i {
 .section-padding {
   @apply xs:p-12 p-16 md:p-24 lg:p-32;
 }
+.container {
+  @apply px-8 sm:px-16;
+}
 .section__header:after {
   content: "";
   position: absolute;
