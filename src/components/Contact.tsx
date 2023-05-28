@@ -25,7 +25,7 @@ export default function Contact() {
     axios
       .post("/api/contact", formValues)
       .then((response: Response) => console.log(response))
-      .catch((err: AxiosError) => console.log(err));
+      .catch((err: AxiosError) => console.error(err));
   };
   return (
     <>

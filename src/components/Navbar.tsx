@@ -53,7 +53,7 @@ export default function Navbar() {
                 <span className="font-bold lg:text-2xl">François</span>
                 <span className="block w-12 h-12">
                   <Logo
-                    className={`${styles["primary-header__logo"]} fill-white `}
+                    className={`${styles["primary-header__logo"]} fill-white`}
                   />
                 </span>
               </a>
