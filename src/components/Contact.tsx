@@ -63,7 +63,7 @@ export default function Contact() {
             <fieldset className={`${styles["contact-form__group"]}`}>
               <label
                 className={`${styles["contact-form__label"]}`}
-                htmlFor="fName"
+                htmlFor="fEmail"
               >
                 Email Address
               </label>

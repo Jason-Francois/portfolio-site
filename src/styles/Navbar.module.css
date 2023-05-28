@@ -19,10 +19,10 @@
   &__logo {
     transition: 0.25s all ease-in-out;
     &:hover {
-      color: var(--primary-color);
+      color: var(--accent-color);
     }
     &:hover svg {
-      fill: var(--primary-color);
+      fill: var(--accent-color);
       transform: rotate(180deg);
     }
   }
