@@ -5,7 +5,10 @@ import styles from "@/styles/Skills.module.css";
 export default function Skills() {
   return (
     <>
-      <section id="skills" className={`pt-16 sm:pt-32 pb-32 px-8 sm:px-16 `}>
+      <section
+        id="skills"
+        className={`flex flex-col items-center pt-16 sm:pt-32 pb-32 px-8 sm:px-16 `}
+      >
         <h1 className={` block text-center  text-4xl font-bold mb-12`}>
           <span className={` section__header relative border-solid pb-1`}>
             Skills
@@ -13,18 +16,18 @@ export default function Skills() {
         </h1>
         <div className={`${styles["skills__orbit-container"]}`}>
           <div className={`${styles["skills__orbit-center-img"]}`}>
-            <img src="/images/angular.png" alt=""></img>
+            <img src="/images/skills.png" alt=""></img>
           </div>
           <ul>
-            <li>
+            <li className={`${styles["angular-icon"]}`}>
               <img
                 className={`${styles["skills__orbit-img"]}`}
                 src="/images/angular.png"
                 alt=""
               />
-              <p>Angular</p>
+              <p className="text-sm">Angular</p>
             </li>
-            <li>
+            <li className={`${styles["cSharp-icon"]}`}>
               <img
                 className={`${styles["skills__orbit-img"]}`}
                 src="/images/c-sharp.png"
@@ -32,7 +35,7 @@ export default function Skills() {
               />
               <p>C#</p>
             </li>
-            <li>
+            <li className={`${styles["css-icon"]}`}>
               <img
                 className={`${styles["skills__orbit-img"]}`}
                 src="/images/css.png"
@@ -40,7 +43,7 @@ export default function Skills() {
               />
               <p>CSS</p>
             </li>
-            <li>
+            <li className={`${styles["html-icon"]}`}>
               <img
                 className={`${styles["skills__orbit-img"]}`}
                 src="/images/html.png"
@@ -48,7 +51,7 @@ export default function Skills() {
               />
               <p>HTML</p>
             </li>
-            <li>
+            <li className={`${styles["javascript-icon"]}`}>
               <img
                 className={`${styles["skills__orbit-img"]}`}
                 src="/images/javascript.png"
@@ -56,7 +59,7 @@ export default function Skills() {
               />
               <p>JavaScript</p>
             </li>
-            <li>
+            <li className={`${styles["postgres-icon"]}`}>
               <img
                 className={`${styles["skills__orbit-img"]}`}
                 src="/images/postgres.png"
@@ -64,7 +67,7 @@ export default function Skills() {
               />
               <p>PostgresSQL</p>
             </li>
-            <li>
+            <li className={`${styles["react-icon"]}`}>
               <img
                 className={`${styles["skills__orbit-img"]}`}
                 src="/images/react.png"
@@ -72,7 +75,7 @@ export default function Skills() {
               />
               <p>React</p>
             </li>
-            <li>
+            <li className={`${styles["python-icon"]}`}>
               <img
                 className={`${styles["skills__orbit-img"]}`}
                 src="/images/python.png"
