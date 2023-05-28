@@ -1,6 +1,6 @@
-import ProjectCard from "@/interfaces/ProjectCard";
+import { Project } from "@/interfaces/interfaces";
 
-const projects: ProjectCard[] = [
+const projects: Project[] = [
   {
     title: "IPTracker",
     description: "Identifies the location of IP addresses around the world",

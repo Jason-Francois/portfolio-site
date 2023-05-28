@@ -25,7 +25,7 @@ export default function Contact() {
     axios
       .post("/api/contact", formValues)
       .then((response: Response) => console.log(response))
-      .catch((err: AxiosError) => console.log(err));
+      .catch((err: AxiosError) => console.error(err));
   };
   return (
     <>
@@ -63,7 +63,7 @@ export default function Contact() {
             <fieldset className={`${styles["contact-form__group"]}`}>
               <label
                 className={`${styles["contact-form__label"]}`}
-                htmlFor="fName"
+                htmlFor="fEmail"
               >
                 Email Address
               </label>

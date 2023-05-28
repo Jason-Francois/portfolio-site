@@ -16,6 +16,7 @@ export default function Document() {
         />
         <link rel="icon" href="/images/tabLogo.png" />
       </Head>
+      <title>Jason François | Full-Stack Developer</title>
       <body>
         <Main />
         <NextScript />
