@@ -6,10 +6,10 @@ export default function Projects() {
     <>
       <section
         id="projects"
-        className={`${styles["projects"]} pt-16 md:pb-32 sm:pt-32 px-8 sm:px-16`}
+        className={`${styles["projects"]} py-16 sm:pt-32 px-8 sm:px-16`}
       >
         <h1
-          className={`${styles["projects__header"]} block text-center text-4xl font-bold mb-3`}
+          className={`${styles["projects__header"]} block text-center text-4xl font-bold`}
         >
           <span
             className={`${styles["projects__header-content"]} section__header relative border-solid pb-1`}
@@ -18,7 +18,7 @@ export default function Projects() {
           </span>
         </h1>
         <div
-          className={`${styles["projects__card-grid"]} grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[3rem] mt-[5rem] items-stretch`}
+          className={`${styles["projects__card-grid"]} grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[3rem] mt-[6rem] items-stretch`}
         >
           {projects.map((project, index) => {
             return (

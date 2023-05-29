@@ -17,13 +17,12 @@
     }
   }
   &__logo {
-    transition: 0.8s all ease-in-out;
+    transition: 0.5s all ease-in-out;
     &:hover {
       color: var(--accent-color);
     }
     &:hover svg {
       fill: var(--accent-color);
-      transform: rotate(360deg);
     }
   }
 }

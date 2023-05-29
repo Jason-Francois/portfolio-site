@@ -3,7 +3,7 @@ Link: https://www.youtube.com/watch?v=vpx8pQaaJ38 */
 
 .skills__orbit {
   &-container {
-    padding-top: 13rem;
+    padding-top: 15rem;
     padding-bottom: 10rem;
     --default-spacing: 15rem;
     --alternate-spacing: 10rem;

@@ -7,10 +7,10 @@ export default function Skills() {
     <>
       <section
         id="skills"
-        className={`flex flex-col items-center pt-16 sm:pt-32 pb-32 px-8 sm:px-16 `}
+        className={`flex flex-col items-center pt-12 sm:pt-24 pb-32 px-8 sm:px-16 `}
       >
-        <h1 className={` block text-center  text-4xl font-bold mb-12`}>
-          <span className={` section__header relative border-solid pb-1`}>
+        <h1 className={`block text-center  text-4xl font-bold mb-12`}>
+          <span className={`section__header relative border-solid pb-1`}>
             Skills
           </span>
         </h1>
