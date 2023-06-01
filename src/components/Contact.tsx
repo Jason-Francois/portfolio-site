@@ -3,9 +3,6 @@ import styles from "../styles/Contact.module.css";
 import { AxiosError } from "axios";
 import { FormValues } from "@/interfaces/interfaces";
 
-interface Response {
-  isSuccessful: string;
-}
 export default function Contact() {
   const axios = require("axios");
   const [formValues, setFormValues] = useState<FormValues>({
@@ -24,7 +21,7 @@ export default function Contact() {
     e.preventDefault();
     axios
       .post("/api/contact", formValues)
-      .then((response: Response) => console.log(response))
+      .then((response: any) => console.log(response))
       .catch((err: AxiosError) => console.error(err));
   };
   return (

@@ -35,7 +35,6 @@ async function sendEmail(emailConfig: FormValues) {
   console.log("Message sent: %s", info.messageId);
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  console.log(req.body);
-  sendEmail(req.body).catch(console.error);
-  res.status(200).json({ name: process.env.MAIL_USERNAME });
+  sendEmail(req.body).catch((err) => res.status(500).json({ error: err }));
+  res.status(200).json({ msg: process.env.MAIL_USERNAME });
 }
