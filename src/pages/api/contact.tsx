@@ -1,5 +1,3 @@
-import { FormValues } from "@/interfaces/interfaces";
-import { error } from "console";
 import type { NextApiRequest, NextApiResponse } from "next";
 const nodemailer = require("nodemailer");
 export default async function handler(
@@ -37,7 +35,7 @@ export default async function handler(
       </div>`,
     };
     let info = await transporter.sendMail(mailOptions);
-    res.status(200).json({ msg: "Message sent: " + info.messageId });
+    res.status(200).json({ msg: "Message sent successfully"});
   } catch (err) {
     res.status(500).json({ msg: err });
   }

@@ -5,11 +5,12 @@ import { FormValues } from "@/interfaces/interfaces";
 
 export default function Contact() {
   const axios = require("axios");
-  const [formValues, setFormValues] = useState<FormValues>({
+  const defaultFormValues = {
     fName: "",
     fEmail: "",
     fMessage: "",
-  });
+  };
+  const [formValues, setFormValues] = useState<FormValues>(defaultFormValues);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -21,7 +22,15 @@ export default function Contact() {
     e.preventDefault();
     axios
       .post("/api/contact", formValues)
-      .then((response: any) => console.log(response))
+      .then((response: any) => {
+        debugger;
+        const successModal = document.querySelector("#successModal");
+        successModal?.classList.toggle(`${styles["success"]}`);
+        setFormValues(defaultFormValues);
+        setTimeout(() => {
+          successModal?.classList.toggle(`${styles["success"]}`);
+        }, 1500);
+      })
       .catch((err: AxiosError) => console.error(err));
   };
   return (
@@ -97,6 +106,14 @@ export default function Contact() {
             >
               Submit
             </button>
+            <div className="relative flex justify-center">
+              <div
+                id="successModal"
+                className={`${styles["success-modal"]} fixed top-0 p-8 rounded-xl bg-green-600 text-white`}
+              >
+                <p>The message was successfully sent!</p>
+              </div>
+            </div>
           </form>
         </div>
       </section>
