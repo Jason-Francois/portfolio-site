@@ -13,13 +13,13 @@ export default function About() {
         <div className={`${styles["about__grid"]}`}>
           <div className={`flex self-center`}>
             <p
-              className={`md:text-xl lg:text-2xl xl:text-3xl font-semibold md:p-5 leading-relaxed`}
+              className={` ${styles["about__text"]} md:text-xl lg:text-2xl xl:text-3xl md:p-5`}
             >
               My main focus is in web development but I do have a bit of mobile
               app development experience as well. I am currently a senior at
-              Drexel University with one and a half years of past internship
-              experience as a software developer. Some of my hobbies include
-              reading, music production, vinyl collecting, and cooking.
+              Drexel University with a year and a half year of past internship
+              experience as a software developer. Some of my other hobbies
+              include reading, music production, vinyl collecting, and cooking.
             </p>
           </div>
           <div className={`flex justify-center`}>
