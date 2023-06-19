@@ -1,7 +1,7 @@
 export interface FormValues {
-  fName: string;
-  fEmail: string;
-  fMessage: string;
+  name: string;
+  email: string;
+  message: string;
 }
 export interface Project {
   title: string;

@@ -6,9 +6,9 @@ import { FormValues } from "@/interfaces/interfaces";
 export default function Contact() {
   const axios = require("axios");
   const defaultFormValues = {
-    fName: "",
-    fEmail: "",
-    fMessage: "",
+    name: "",
+    email: "",
+    message: "",
   };
   const [formValues, setFormValues] = useState<FormValues>(defaultFormValues);
 
@@ -21,9 +21,8 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     axios
-      .post("/api/contact", formValues)
-      .then((response: any) => {
-        debugger;
+      .post("api/contact", formValues)
+      .then(() => {
         const successModal = document.querySelector("#successModal");
         successModal?.classList.toggle(`${styles["success"]}`);
         setFormValues(defaultFormValues);
@@ -52,15 +51,15 @@ export default function Contact() {
             <fieldset className={`${styles["contact-form__group"]}`}>
               <label
                 className={`${styles["contact-form__label"]}`}
-                htmlFor="fName"
+                htmlFor="name"
               >
                 Name
               </label>
               <input
                 type="text"
-                id="fName"
-                name="fName"
-                value={formValues.fName}
+                id="name"
+                name="name"
+                value={formValues.name}
                 onChange={handleChange}
                 required
               />
@@ -69,15 +68,15 @@ export default function Contact() {
             <fieldset className={`${styles["contact-form__group"]}`}>
               <label
                 className={`${styles["contact-form__label"]}`}
-                htmlFor="fEmail"
+                htmlFor="email"
               >
                 Email Address
               </label>
               <input
                 type="text"
-                id="fEmail"
-                name="fEmail"
-                value={formValues.fEmail}
+                id="email"
+                name="email"
+                value={formValues.email}
                 onChange={handleChange}
                 required
               />
@@ -86,17 +85,17 @@ export default function Contact() {
             <fieldset className={`${styles["contact-form__group"]}`}>
               <label
                 className={`${styles["contact-form__label"]}`}
-                htmlFor="fMessage"
+                htmlFor="message"
               >
                 Message
               </label>
               <textarea
-                id="fMessage"
-                name="fMessage"
+                id="message"
+                name="message"
                 placeholder="Enter a message"
                 cols={20}
                 className={`rounded-md w-full`}
-                value={formValues.fMessage}
+                value={formValues.message}
                 onChange={handleChange}
               ></textarea>
             </fieldset>

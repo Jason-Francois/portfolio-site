@@ -11,7 +11,7 @@ const projects: Project[] = [
   },
   {
     title: "CountriesAPI",
-    description: "Dashboard that displays data about various countries",
+    description: "Dashboard that displays data about various countries.",
     skills: "react;scss;nextJS;",
     backgroundImg: "countriesAPI.png",
     githubUrl: "https://github.com/Jason-Francois/countries-api",

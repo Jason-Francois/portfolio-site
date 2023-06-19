@@ -42,14 +42,6 @@ export default function Footer() {
                   width={25}
                 />
               </a>
-              <a href="mailto: jasonc.francois@gmail.com" target="_blank">
-                <Image
-                  src={"/images/email.png"}
-                  alt="Email icon"
-                  height={25}
-                  width={25}
-                />
-              </a>
             </div>
           </div>
           <p className="text-center text-xs">

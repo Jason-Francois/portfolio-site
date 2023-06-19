@@ -23,7 +23,7 @@ export default function Projects() {
           {projects.map((project, index) => {
             return (
               <div
-                className={`${styles["projects__card"]} rounded-2xl bg-white  lg:max-w-l  flex-col flex overflow-hidden`}
+                className={`${styles["projects__card"]} rounded-2xl bg-white  lg:max-w-l  flex-col flex overflow-hidden max-w-[37.5rem]`}
                 key={index}
               >
                 <div
@@ -46,7 +46,12 @@ export default function Projects() {
                   className={`${styles["projects__card-content"]} flex flex-col p-6 grow gap-5`}
                 >
                   <p className="text-xl font-bold">{project.title}</p>
-                  <p className="flex-1">{project.description}</p>
+                  <p className="flex-1  w-100  break-words">
+                    {project.description}
+                  </p>
+                  <div
+                    className={`${styles["projects__card--skills-btn-container"]}`}
+                  ></div>
                   <div className="flex gap-8 flex-col md:flex-row">
                     <a
                       className={`${styles["projects__card-btn"]} btn-primary`}
