@@ -18,12 +18,12 @@ export default function Projects() {
           </span>
         </h1>
         <div
-          className={`${styles["projects__card-grid"]} grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[3rem] mt-[6rem] items-stretch`}
+          className={`${styles["projects__card-grid"]} flex flex-col md:flex-row justify-around gap-[3rem] mt-[6rem] items-stretch`}
         >
           {projects.map((project, index) => {
             return (
               <div
-                className={`${styles["projects__card"]} rounded-2xl bg-white  lg:max-w-l  flex-col flex overflow-hidden max-w-[37.5rem]`}
+                className={`${styles["projects__card"]} rounded-2xl bg-white  lg:max-w-l  flex-col flex overflow-hidden max-w-[40.5rem] lg:min-w-[32rem] xl:min-w-[35rem]`}
                 key={index}
               >
                 <div
