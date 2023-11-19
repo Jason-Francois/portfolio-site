@@ -119,7 +119,7 @@ export default function Navbar() {
                 className={`${styles["primary-nav__item"]}`}
               >
                 <a
-                  href="/other/resume.pdf"
+                  href="/other/Jason_Francois_Resume.pdf"
                   target="_blank"
                   rel="noreferrer noopener"
                 >

@@ -39,3 +39,6 @@ jspm_packages
 
 #Environment variables
 .env.*
+
+#VS Code stuff
+/**/**/.DS_Store
