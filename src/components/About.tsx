@@ -15,11 +15,11 @@ export default function About() {
             <p
               className={` ${styles["about__text"]} md:text-xl lg:text-2xl xl:text-3xl md:p-5`}
             >
-              My main focus is in web development but I do have a bit of mobile
-              app development experience as well. I am currently a senior at
-              Drexel University with a year and a half year of past internship
-              experience as a software developer. Some of my other hobbies
-              include reading, music production, vinyl collecting, and cooking.
+              My main focus is in web development, but I do have a bit of mobile
+              app development experience as well. In 2024, I received a
+              Bachelors of Science in Computer Science from Drexel University.
+              Some of my other hobbies include reading, music production, vinyl
+              collecting, and cooking.
             </p>
           </div>
           <div className={`flex justify-center`}>

@@ -32,7 +32,7 @@ export default function Hero() {
           <p
             className={`${styles["hero__caption"]} center text-xl lg:text-2xl`}
           >
-            A Full-Stack developer from Philadelphia, PA
+            A Full-Stack developer based in Chicago, IL
           </p>
           <a
             href="#projects"
