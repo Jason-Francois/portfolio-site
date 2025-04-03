@@ -119,9 +119,10 @@ export default function Navbar() {
                 className={`${styles["primary-nav__item"]}`}
               >
                 <a
-                  href="/other/Jason_Francois_Resume.pdf"
+                  href="https://jason-francois.github.io/resume/Jason_Francois_Resume.pdf"
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label="(opens resume pdf in a new tab)"
                 >
                   Resume
                 </a>
